@@ -1,2 +1,7 @@
 .env
 .vscode
+.DS_Store
+.coverage
+.pytest_cache
+zappa_settings.json
+__pycache__
