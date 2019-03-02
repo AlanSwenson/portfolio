@@ -106,6 +106,19 @@ h6 {
   padding: 0;
 }
 
+.social-link {
+  display: block;
+  height: 2.3rem;
+  width: 2.3rem;
+  line-height: 2.5rem;
+  font-size: 1.1rem;
+  background-color: #1D809F;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
