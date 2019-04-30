@@ -393,3 +393,9 @@ a:hover, a:focus, a:active {
 .text-secondary {
   color: #ecb807 !important;
 }
+
+#python_symbol{
+  font-size: 20em !important; 
+  padding: 35px !important; 
+  color: #1D809F !important;
+}
