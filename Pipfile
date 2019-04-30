@@ -7,6 +7,9 @@ name = "pypi"
 flask = "*"
 zappa = "*"
 environs = "*"
+urllib3 = ">=1.24.2"
+Jinja2 = ">=2.10.1"
+pyyaml = ">=4.2b1"
 
 [dev-packages]
 black = "*"
