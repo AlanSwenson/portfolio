@@ -11,4 +11,11 @@ def create_app(config_class=DevelopmentConfig):
     def root():
         return render_template("layout.html", title="Alan Swenson - Portfolio")
 
+    @app.route("/restaurant/", methods=["POST", "GET"])
+    def restaurant():
+        return render_template(
+            "restaurant_body.html",
+            title="Restaurant Example - Alan Swenson - Portfolio",
+        )
+
     return app
