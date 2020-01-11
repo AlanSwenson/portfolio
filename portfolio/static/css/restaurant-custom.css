@@ -14,9 +14,11 @@
     }
 }
 
-
-
-.carousel-inner{
+.intro-carousel {
     width:100%;
     max-height: 500px !important;
   }
+
+.intro-carousel .carousel-item {
+    width: unset;
+}
