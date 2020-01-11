@@ -3,16 +3,13 @@
     <a class="navbar-brand ml-3" href="#">Alan's Restraurant</a>
     <div class="nav-links-container ml-auto">
         <!-- hamburger menu -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        {% include 'restaurant_hamburger.html' %}
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav mr-3">
+            <div class="navbar-nav mr-md-3">
                 <a class="nav-item nav-link active" href="#welcome">WELCOME <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">MENU</a>
-                <a class="nav-item nav-link" href="#">CONTACT</a>
+                <a class="nav-item nav-link" href="#menu">MENU</a>
+                <a class="nav-item nav-link" href="#contact">CONTACT</a>
             </div>
         </div>
     </div>

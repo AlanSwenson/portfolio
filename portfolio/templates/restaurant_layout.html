@@ -13,6 +13,11 @@
 
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename='css/restaurant-custom.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/hamburger.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/scroll-top.css') }}" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4c3d8eeae0.js" crossorigin="anonymous"></script>
 
     <title>{{ title }}</title>
 </head>
@@ -21,6 +26,7 @@
     {% include "restaurant_nav.html" %}
     {% include "restaurant_carousel.html" %}
     {% block content %}{% endblock %}
+    {% include "return_top.html" %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -32,7 +38,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='js/restaurant.js') }}"></script>
+    <script async src="{{ url_for('static', filename='js/hamburger.js') }}"></script>
+    <script async src="{{ url_for('static', filename='js/smooth_scroll.js') }}"></script>
+    <script async src="{{ url_for('static', filename='js/scroll_top.js') }}"></script>
 
 
 
