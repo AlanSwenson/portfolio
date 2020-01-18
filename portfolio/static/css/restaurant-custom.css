@@ -17,8 +17,9 @@
 .intro-carousel {
     width:100%;
     max-height: 500px !important;
-  }
+}
 
-.intro-carousel .carousel-item {
-    width: unset;
+.restaurant-name {
+    font-family: 'Amatic SC', cursive;
+    font-size: 36px;
 }

@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template
 
 from portfolio.config import DevelopmentConfig
@@ -13,9 +15,15 @@ def create_app(config_class=DevelopmentConfig):
 
     @app.route("/restaurant/", methods=["POST", "GET"])
     def restaurant():
+
+        # Add are remove images from 'static/img/gallery'
+        # to include them in the gallery section
+        images = os.listdir(os.path.join(app.static_folder, "img/restaurant/carousel"))
+
         return render_template(
             "restaurant_body.html",
             title="Restaurant Example - Alan Swenson - Portfolio",
+            images=images,
         )
 
     return app
