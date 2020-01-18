@@ -15,8 +15,18 @@ def create_app(config_class=DevelopmentConfig):
 
     @app.route("/restaurant/", methods=["POST", "GET"])
     def restaurant():
+        class MenuItem:
+            def __init__(self, name, price, description):
+                self.name = name
+                self.price = price
+                self.description = description
 
-        # Add are remove images from 'static/img/gallery'
+        menu_items = []
+        menu_items.append(
+            MenuItem("Tornado Potato", "8", "anju salt blend, furikake, citrus aioli")
+        )
+
+        # Add or remove images from 'static/img/gallery'
         # to include them in the gallery section
         images = os.listdir(os.path.join(app.static_folder, "img/restaurant/carousel"))
 
@@ -24,6 +34,7 @@ def create_app(config_class=DevelopmentConfig):
             "restaurant_body.html",
             title="Restaurant Example - Alan Swenson - Portfolio",
             images=images,
+            menu_items=menu_items,
         )
 
     return app

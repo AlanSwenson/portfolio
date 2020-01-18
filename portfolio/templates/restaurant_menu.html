@@ -1,3 +1,8 @@
-<div id="menu">
-    <h1>Menu Section</h1>
+<div id="menu" class="text-center">
+    <h1>Menu</h1>
+    <section class="menu-section">
+        {% for item in menu_items %}
+        {{item.name}} |
+        {{item.price}}
+        <br> {{item.description}} {% endfor %} </section>
 </div>
