@@ -1,24 +1,24 @@
 function carouselNormalization() {
     var items = $('.intro-carousel .carousel-item'), //grab all slides
         heights = [], //create empty array to store height values
-        tallest; //create variable to make note of the tallest slide
+        smallest; //create variable to make note of the smallest slide
 
     if (items.length) {
         function normalizeHeights() {
             items.each(function () { //add heights to array
                 heights.push($(this).height());
             });
-            tallest = Math.max.apply(null, heights); //cache largest value
+            smallest = Math.min.apply(null, heights); //cache smallest value
             items.each(function () {
-                $(this).css('min-height', tallest + 'px');
+                $(this).css('max-height', smallest + 'px');
             });
         };
         normalizeHeights();
 
         $(window).on('resize orientationchange', function () {
-            tallest = 0, heights.length = 0; //reset vars
+            smallest = 0, heights.length = 0; //reset vars
             items.each(function () {
-                $(this).css('min-height', '0'); //reset min-height
+                $(this).css('max-height', 'unset'); //reset max-height
             });
             normalizeHeights(); //run it again 
         });
