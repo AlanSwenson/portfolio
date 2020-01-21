@@ -24,6 +24,7 @@
 
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename='css/stylish-portfolio.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
 
 </head>
 
@@ -107,52 +108,7 @@
 
     {% include 'about.html' %}
 
-    <!-- Projects -->
-    <section class="content-section bg-primary text-white text-center" id="projects">
-        <div class="container">
-            <div class="content-section-heading">
-                <h2 class="mb-5">Projects</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-                    <span class="service-icon rounded-circle mx-auto mb-3">
-                        <i class="fab fa-amazon"></i>
-                    </span>
-                    <h3>
-                        <strong>Amazon Review Scraper</strong>
-                    </h3>
-                    <p class="text-white mb-0">Python/Flask/Postgres/Travis CI/AWS Lambda</p>
-                    <a class="text-white" href="https://github.com/AlanSwenson/amz-review-scraper" target="blank"><i
-                            class="icon-social-github"></i>
-                        Source Code</a>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-                    <span class="service-icon rounded-circle mx-auto mb-3">
-                        <i class="fab fa-raspberry-pi"></i>
-                    </span>
-                    <h3>
-                        <strong>Streaming Dashboard</strong>
-                    </h3>
-                    <p class="text-white mb-0">Python/Flask/Streaming Twitter & Darksky API/Raspberry Pi</p>
-                    <a class="text-white" href="https://github.com/AlanSwenson/edwin" target="blank"><i
-                            class="icon-social-github"></i>
-                        Source Code</a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <span class="service-icon rounded-circle mx-auto mb-3">
-                        <i class="fas fa-bookmark"></i>
-                    </span>
-                    <h3>
-                        <strong>This Website!</strong>
-                    </h3>
-                    <p class="text-white mb-0">Python/Flask/AWS Lambda</p>
-                    <a class="text-white" href="https://github.com/AlanSwenson/portfolio" target="blank"><i
-                            class="icon-social-github"></i>
-                        Source Code</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include 'projects.html' %}
 
     <!-- Callout -->
     <section class="callout" id="opensource">
