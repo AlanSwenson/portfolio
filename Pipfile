@@ -6,13 +6,14 @@ name = "pypi"
 [packages]
 flask = "*"
 environs = "*"
-urllib3 = ">=1.24.2"
-Jinja2 = ">=2.10.1"
-pyyaml = ">=4.2b1"
+urllib3 = "*"
 
 [dev-packages]
 black = "*"
 zappa = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
