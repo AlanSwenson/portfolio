@@ -5,3 +5,4 @@
 .pytest_cache
 zappa_settings.json
 __pycache__
+node_modules/
