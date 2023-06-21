@@ -7,13 +7,10 @@ name = "pypi"
 flask = "*"
 environs = "*"
 urllib3 = "*"
+gunicorn = "*"
 
 [dev-packages]
 black = "*"
-zappa = "*"
-
-[requires]
-python_version = "3.7"
 
 [pipenv]
 allow_prereleases = true
